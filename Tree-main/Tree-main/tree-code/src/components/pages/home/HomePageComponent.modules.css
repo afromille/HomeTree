@@ -1,0 +1,209 @@
+body {
+    background-image: url('/src/assets/images/fundo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(252, 249, 249);
+}
+
+.logo {
+    height: 40px;
+    /* Define a altura da logo */
+    margin-right: 15px;
+    /* Adiciona 15 pixels de margem à direita da logo */
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    /* Alinha os itens verticalmente */
+    gap: 20px;
+    /* Espaçamento entre as divs */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.card {
+    box-sizing: border-box;
+    width: 50%;
+    height: 350px;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+}
+
+.card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+
+.card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.i {
+    width: 50%;
+    /* Define a largura da imagem */
+    height: 35%;
+    /* Define a altura da imagem */
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+p {
+    margin: left;
+    color:#000000;
+    text-align: left;
+    font-size: 70%; /* Diminui o tamanho do texto dos parágrafos */
+    margin-left: 10px;
+}
+
+.container {
+    display: flex;
+    /* Define o layout como flexível */
+    flex-direction: column;
+    /* Alinha os itens verticalmente */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+}
+
+/* Estilo para a imagem do cabeçalho */
+.header-image {
+    position: relative;
+    /* Define a posição relativa para o container da imagem */
+    width: 100%;
+    /* Largura total */
+    height: 300px;
+    /* Altura da imagem */
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.header-image img {
+    width: 100%;
+    /* Largura total da imagem */
+    height: 100%;
+    /* Altura total da imagem */
+    object-fit: cover;
+    /* Ajusta a imagem para cobrir todo o espaço */
+    border-radius: 10px;
+}
+
+.cta-button {
+    margin-top: 10px;
+    /* Espaçamento superior */
+    padding: 10px 20px;
+    /* Espaçamento interno */
+    background-color: rgb(40, 143, 95);
+    /* Cor do botão */
+    color: white;
+    /* Cor do texto do botão */
+    border: none;
+    /* Remove a borda */
+    cursor: pointer;
+    /* Cursor de ponteiro ao passar o mouse */
+    --color: #00A97F;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    text-transform: uppercase;
+    color: black;
+    z-index: 1;
+}
+
+.cta-button::before,
+.cta-button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+}
+
+.cta-button::before {
+    top: -1em;
+    left: -1em;
+}
+
+.cta-button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.cta-button::before,
+.button:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.cta-button:hover {
+    color: #218838;
+    /* Cor do botão ao passar o mouse */
+}
+
+.cta-button:active {
+    filter: brightness(.8);
+}
+
+.input-group {
+    position: relative;
+}
+
+.input {
+    border: solid 1.5px #9e9e9e;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #000000;
+    transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 10px;
+}
+
+.user-label {
+    position: absolute;
+    left: 15px;
+    color: #000000;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus,
+input:valid {
+    outline: none;
+    border: 1.5px solid #1a73e8;
+}
+
+.input:focus~label,
+input:valid~label {
+    transform: translateY(-50%) scale(0.8);
+    background-color: #212121;
+    padding: 0 .2em;
+    color: #2196f3;
+}
